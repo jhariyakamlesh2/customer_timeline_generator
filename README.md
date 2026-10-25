@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Customer Timeline Generator
 
 A lightweight CRM feature that presents a customer's calls, emails, support tickets, and purchases in one chronological history. The project uses Python, pandas, `datetime`, SQLite, and sorting/grouping, as required by the assignment.
@@ -149,3 +150,7 @@ This is an educational prototype, not a production CRM. It has no authentication
 ## Screenshots / demo
 
 The `screenshots/` directory contains two illustrative UI previews based on the bundled fictional sample data: a CRM timeline view and a structured event-records view. They are design previews, not captures from a running Streamlit process. Run the application locally to interact with the live controls.
+=======
+# customer_timeline_generator
+customer_timeline_generator Project 
+>>>>>>> 1786441732236dd435aef0eb586761c276d20a34
