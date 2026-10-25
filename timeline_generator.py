@@ -76,12 +76,69 @@ def init_db(db_path: str | Path = DEFAULT_DB_PATH, seed: bool = True) -> None:
             customers = pd.read_csv(CUSTOMERS_CSV, dtype={"customer_id": str})
             customers = customers[CUSTOMER_COLUMNS]
             customers.to_sql("customers", conn, if_exists="append", index=False)
-
         if seed and event_count == 0:
-            events = pd.read_csv(EVENTS_CSV, dtype={"event_id": str, "customer_id": str})
-            events = events[EVENT_COLUMNS]
-            events["amount"] = pd.to_numeric(events["amount"], errors="coerce").fillna(0.0)
-            events.to_sql("customer_events", conn, if_exists="append", index=False)
+    events = pd.read_csv(
+        EVENTS_CSV,
+        dtype={"event_id": str, "customer_id": str}
+    )
+
+    events = events[EVENT_COLUMNS].copy()
+
+    # Clean text columns
+    for col in ["event_id", "customer_id", "status"]:
+        events[col] = events[col].astype("string").str.strip()
+
+    # Check required fields
+    required_columns = ["event_id", "customer_id", "status"]
+
+    for col in required_columns:
+        invalid = (
+            events[col].isna()
+            | events[col].eq("")
+            | events[col].str.lower().eq("nan")
+        )
+
+        if invalid.any():
+            raise ValueError(
+                f"Invalid or missing values in {col}. "
+                f"Problematic rows: {events.index[invalid].tolist()}"
+            )
+
+    # Check duplicate event IDs
+    if events["event_id"].duplicated().any():
+        duplicates = events.loc[
+            events["event_id"].duplicated(keep=False),
+            "event_id"
+        ].tolist()
+
+        raise ValueError(f"Duplicate event IDs found: {duplicates}")
+
+    # Convert amount to numeric
+    events["amount"] = pd.to_numeric(
+        events["amount"], errors="coerce"
+    ).fillna(0.0)
+
+    # Check that every event belongs to an existing customer
+    customer_ids = pd.read_sql_query(
+        "SELECT customer_id FROM customers",
+        conn
+    )["customer_id"].astype(str)
+
+    missing_customers = ~events["customer_id"].isin(customer_ids)
+
+    if missing_customers.any():
+        raise ValueError(
+            "Events reference customers that do not exist: "
+            + str(events.loc[missing_customers, "customer_id"].tolist())
+        )
+
+    # Insert validated events
+    events.to_sql(
+        "customer_events",
+        conn,
+        if_exists="append",
+        index=False
+    )
 
 
 def get_customers(db_path: str | Path = DEFAULT_DB_PATH) -> pd.DataFrame:
