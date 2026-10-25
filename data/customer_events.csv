@@ -1,0 +1,27 @@
+event_id,customer_id,event_type,event_date,subject,description,status,amount,created_by
+EVT-2001,CUST-1001,Call,2026-01-08 10:15,Quarterly account check-in,Discussed account goals and upcoming renewal requirements,Completed,0.00,Nina Roberts
+EVT-2002,CUST-1001,Email,2026-01-09 14:20,Renewal proposal shared,Sent the updated renewal proposal and pricing overview,Sent,0.00,Nina Roberts
+EVT-2003,CUST-1001,Ticket,2026-01-12 09:05,Invoice export issue,Customer reported that invoice exports were missing two columns,Resolved,0.00,Support Desk
+EVT-2004,CUST-1001,Purchase,2026-02-02 16:40,Annual subscription renewal,Annual CRM subscription renewal completed,Completed,48000.00,Sales Team
+EVT-2005,CUST-1001,Call,2026-03-14 11:00,Product adoption review,Reviewed feature usage and agreed on a training session,Completed,0.00,Nina Roberts
+EVT-2006,CUST-1001,Email,2026-10-18 15:10,Training session confirmation,Shared the agenda and confirmed training attendees,Sent,0.00,Nina Roberts
+EVT-2007,CUST-1001,Ticket,2026-10-22 12:25,Dashboard access request,Additional dashboard access requested for the finance team,Open,0.00,Support Desk
+EVT-2008,CUST-1002,Email,2026-02-03 09:30,Welcome and onboarding,Sent onboarding guide and account setup instructions,Sent,0.00,Daniel Lee
+EVT-2009,CUST-1002,Call,2026-02-06 13:45,Onboarding call,Walked the customer through initial account configuration,Completed,0.00,Daniel Lee
+EVT-2010,CUST-1002,Ticket,2026-02-10 17:05,Import validation warning,Helped customer correct the spreadsheet date format,Resolved,0.00,Support Desk
+EVT-2011,CUST-1002,Purchase,2026-03-01 10:30,Starter plan purchase,Starter plan purchased for the customer success team,Completed,12000.00,Sales Team
+EVT-2012,CUST-1002,Email,2026-07-19 08:55,Feature release announcement,Shared the latest product release notes,Sent,0.00,Daniel Lee
+EVT-2013,CUST-1003,Call,2026-03-02 10:00,Requirements discovery,Discussed integration requirements and reporting needs,Completed,0.00,Olivia Martin
+EVT-2014,CUST-1003,Email,2026-03-03 16:20,Integration documentation,Sent API integration documentation and next steps,Sent,0.00,Olivia Martin
+EVT-2015,CUST-1003,Ticket,2026-03-11 11:40,API token clarification,Customer asked how to rotate an API token,Resolved,0.00,Support Desk
+EVT-2016,CUST-1003,Purchase,2026-04-15 14:00,Analytics add-on,Analytics add-on purchased for quarterly reporting,Completed,18500.00,Sales Team
+EVT-2017,CUST-1003,Call,2026-09-28 15:30,Quarterly business review,Reviewed results and discussed expansion opportunities,Completed,0.00,Olivia Martin
+EVT-2018,CUST-1004,Email,2026-04-07 09:15,Account verification,Requested confirmation of account and billing details,Sent,0.00,Ethan Cole
+EVT-2019,CUST-1004,Call,2026-04-09 12:00,Billing consultation,Explained billing cycles and payment options,Completed,0.00,Ethan Cole
+EVT-2020,CUST-1004,Ticket,2026-04-12 16:10,Password reset assistance,Helped the user reset a locked account password,Resolved,0.00,Support Desk
+EVT-2021,CUST-1004,Purchase,2026-05-02 10:45,Wellness team plan,Team plan purchased for the wellness coordinators,Completed,9500.00,Sales Team
+EVT-2022,CUST-1005,Call,2026-05-14 11:20,Enterprise onboarding kickoff,Defined onboarding milestones and ownership,Completed,0.00,Grace Kim
+EVT-2023,CUST-1005,Email,2026-05-15 14:10,Project plan and milestones,Sent the agreed rollout plan and project milestones,Sent,0.00,Grace Kim
+EVT-2024,CUST-1005,Ticket,2026-05-22 10:05,Single sign-on configuration,SSO configuration question is waiting for customer confirmation,Pending,0.00,Support Desk
+EVT-2025,CUST-1005,Purchase,2026-06-10 15:55,Enterprise platform license,Enterprise platform license purchased,Completed,72500.00,Sales Team
+EVT-2026,CUST-1005,Call,2026-10-20 09:45,Deployment progress review,Reviewed deployment progress and pending security checks,Completed,0.00,Grace Kim

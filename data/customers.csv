@@ -1,0 +1,6 @@
+customer_id,customer_name,email,phone,company,segment,joined_date
+CUST-1001,Aarav Sharma,aarav.sharma@example.com,+91-90000-10001,Northstar Retail,Enterprise,2025-01-12
+CUST-1002,Meera Patel,meera.patel@example.com,+91-90000-10002,BluePeak Foods,SMB,2025-03-05
+CUST-1003,Rohan Verma,rohan.verma@example.com,+91-90000-10003,Verma Consulting,Mid-Market,2025-06-18
+CUST-1004,Ananya Singh,ananya.singh@example.com,+91-90000-10004,GreenLeaf Wellness,SMB,2025-08-22
+CUST-1005,Kabir Khan,kabir.khan@example.com,+91-90000-10005,Orbit Digital,Enterprise,2025-11-09
